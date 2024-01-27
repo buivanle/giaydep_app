@@ -48,17 +48,20 @@ class _BlogsScreen extends State<BlogsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-        body: ContainedTabBarView(
-          tabBarProperties: const TabBarProperties(
-              height: 24,
-              indicatorColor: Colors.blueAccent,
-              labelStyle: TextStyle(color: Colors.black, fontSize: 12)),
-          tabs: const [
-            Text('Tất cả bài viết', style: TextStyle(color: Colors.black)),
-            Text('Bài viết của tôi', style: TextStyle(color: Colors.black))
-          ],
-          views: [allPostTab(), myPostTab()],
-          onChange: (index) => print(index),
+        body: Padding(
+          padding: const EdgeInsets.only(top: 42.0),
+          child: ContainedTabBarView(
+            tabBarProperties: const TabBarProperties(
+                height: 24,
+                indicatorColor: Colors.blueAccent,
+                labelStyle: TextStyle(color: Colors.black, fontSize: 12)),
+            tabs: const [
+              Text('Tất cả bài viết', style: TextStyle(color: Colors.black)),
+              Text('Bài viết của tôi', style: TextStyle(color: Colors.black))
+            ],
+            views: [allPostTab(), myPostTab()],
+            onChange: (index) => print(index),
+          ),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
         floatingActionButton: Padding(

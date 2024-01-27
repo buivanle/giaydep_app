@@ -87,7 +87,7 @@ class _ProductItemAdminView extends State<ProductItemAdminView> {
         shadowColor: const Color(0x33333333),
         child: Container(
           padding: const EdgeInsets.all(4),
-          height: 64,
+          height: 96,
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -134,7 +134,7 @@ class _ProductItemAdminView extends State<ProductItemAdminView> {
                 ),
               ),
               SizedBox(
-                width: 36,
+                width: 48,
                 child: TextButton(
                     onPressed: () {
                       goToEditProductScreen();
@@ -143,10 +143,12 @@ class _ProductItemAdminView extends State<ProductItemAdminView> {
                       "Sửa",
                       style: TextStyle(
                           fontSize: 10, fontWeight: FontWeight.normal),
-                    )),
+                    ),
+                  style: TextButton.styleFrom(padding: EdgeInsets.zero),
+                ),
               ),
               SizedBox(
-                width: 36,
+                width: 48,
                 child: TextButton(
                     onPressed: () {
                       showDialogConfirmDeleteProduct();
